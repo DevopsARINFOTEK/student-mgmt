@@ -63,11 +63,10 @@ export default function AdminDashboard() {
     )
     .map((student) => (
       <tr key={student.id} className="border-b">
-        <td className="p-3">{student.fullname}</td>
-        <td className="p-3">{student.registration_id}</td>
-        <td className="p-3">{student.degree}</td>
-        <td className="p-3">{student.contact}</td>
-
+        <td className="p-3 text-left">{student.fullname}</td>
+<td className="p-3 text-left">{student.registration_id}</td>
+<td className="p-3 text-left">{student.degree}</td>
+<td className="p-3 text-left">{student.contact}</td>
         <td className="p-3 flex gap-2">
           <button
             className="bg-blue-600 text-white px-4 py-2 rounded-lg"

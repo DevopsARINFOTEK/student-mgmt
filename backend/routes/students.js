@@ -5,6 +5,7 @@ const pool = require("../db");
 // Save Student
 router.post("/", async (req, res) => {
   try {
+    console.log("Received Data:", req.body);
     const {
       fullname,
       dob,

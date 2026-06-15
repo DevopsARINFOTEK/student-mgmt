@@ -6,7 +6,7 @@ export default function StudentRegistration() {
   const navigate = useNavigate();
   const [studentId, setStudentId] = useState("");
   const [formData, setFormData] = useState({
-    fullName: "",
+    fullname: "",
     dob: "",
     gender: "",
     contact: "",
@@ -40,7 +40,7 @@ export default function StudentRegistration() {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          fullname: formData.fullName,
+          fullname: formData.fullname,
           dob: formData.dob,
           gender: formData.gender,
           contact: formData.contact,
@@ -81,7 +81,7 @@ export default function StudentRegistration() {
         </h2>
 
         <div className="space-y-2">
-          <p><b>Name:</b> {formData.fullName}</p>
+          <p><b>Name:</b> {formData.fullname}</p>
           <p><b>Email:</b> {formData.email}</p>
           <p><b>College:</b> {formData.college}</p>
           <p><b>Degree:</b> {formData.degree}</p>
@@ -97,7 +97,7 @@ export default function StudentRegistration() {
         <div className="grid md:grid-cols-2 gap-6">
           <input
             type="text"
-            name="fullName"
+            name="fullname"
             placeholder="Full Name"
             className="border rounded-2xl p-4"
             onChange={handleChange}
@@ -172,6 +172,42 @@ export default function StudentRegistration() {
           onChange={handleChange}
           required
         />
+        <div className="grid md:grid-cols-2 gap-6">
+
+  <input
+  type="text"
+  name="degree"
+  placeholder="Degree"
+  className="w-full p-4 rounded-2xl border"
+  onChange={handleChange}
+  required
+/>
+
+ <input
+  type="text"
+  name="branch"
+  placeholder="Branch"
+  className="w-full p-4 rounded-2xl border"
+  onChange={handleChange}
+  required
+/>
+  <input
+  type="text"
+  name="year"
+  placeholder="Year"
+  className="w-full p-4 rounded-2xl border"
+  onChange={handleChange}
+  required
+/>
+  <input
+  type="text"
+  name="semester"
+  placeholder="Semester"
+  className="w-full p-4 rounded-2xl border"
+  onChange={handleChange}
+  required
+/>
+</div>
 
         <button
           type="submit"

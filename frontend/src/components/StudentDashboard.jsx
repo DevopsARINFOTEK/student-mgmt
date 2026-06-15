@@ -203,12 +203,7 @@ export default function StudentDashboard() {
               <Info label="Email Address" value={student.email} />
               <Info label="College Name" value={student.college} />
 
-              <Info label="Degree" value={student.degree} />
-              <Info label="Branch" value={student.branch} />
-
-              <Info label="Year" value={student.year} />
-              <Info label="Semester" value={student.semester} />
-
+              
             </div>
 
 
@@ -250,13 +245,16 @@ export default function StudentDashboard() {
             <td className="p-3">{s.registration_id}</td>
             <td className="p-3">{s.degree}</td>
             <td className="p-3">{s.contact}</td>
-            <td className="p-3">
+            <td className="p-3 text-center">
   <button
-  className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700"
-  onClick={() => setSelectedStudent(s)}
->
-  👁 View
-</button>
+    className="bg-blue-600 text-white px-5 py-2 rounded-lg hover:bg-blue-700 inline-flex items-center justify-center"
+    onClick={() => {
+      console.log(s);
+      setSelectedStudent(s);
+    }}
+  >
+    👁 View
+  </button>
 </td>
           </tr>
         ))}
@@ -295,11 +293,7 @@ export default function StudentDashboard() {
         <Info label="Email" value={selectedStudent.email} />
         <Info label="College" value={selectedStudent.college} />
 
-        <Info label="Degree" value={selectedStudent.degree} />
-        <Info label="Branch" value={selectedStudent.branch} />
-
-        <Info label="Year" value={selectedStudent.year} />
-        <Info label="Semester" value={selectedStudent.semester} />
+        
 
       </div>
 
