@@ -1,0 +1,24 @@
+arinfotek=# \d studentdetails;
+                                            Table "public.studentdetails"
+      Column       |            Type             | Collation | Nullable |                  Default
+-------------------+-----------------------------+-----------+----------+--------------------------------------------
+ id                | integer                     |           | not null | nextval('studentdetails_id_seq'::regclass)
+ fullname          | character varying(100)      |           | not null |
+ dob               | date                        |           |          |
+ gender            | character varying(20)       |           |          |
+ contact           | character varying(15)       |           |          |
+ alternate_contact | character varying(15)       |           |          |
+ address           | text                        |           |          |
+ college           | character varying(200)      |           |          |
+ degree            | character varying(50)       |           |          |
+ branch            | character varying(100)      |           |          |
+ year              | character varying(20)       |           |          |
+ semester          | character varying(20)       |           |          |
+ registration_id   | character varying(100)      |           |          |
+ email             | character varying(150)      |           |          |
+ created_at        | timestamp without time zone |           |          | CURRENT_TIMESTAMP
+ attendance        | character varying(20)       |           |          |
+ result            | character varying(50)       |           |          |
+ payment_status    | character varying(30)       |           |          |
+Indexes:
+    "studentdetails_pkey" PRIMARY KEY, btree (id)
